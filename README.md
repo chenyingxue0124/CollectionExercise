@@ -144,7 +144,7 @@ new演算子では型名の後の「[」から「]」の間に要素の数であ
 
 Listと配列の変換
 
-    String[] array = list.toArray(new String[4]);
+    String array[] = list.toArray(new String[4]);
 
 Listの種類
 **ArrayList　LinkedList**
@@ -164,7 +164,6 @@ Listの要素はインデックス番号を指定して、値を呼び出しま�
 Mapの定義
 
     HashMap<型1,型2> 変数名 = new HashMap<型1,型2>();
-    Map<String, Integer> map = new HashMap<>();
 
 MapのkeyはString型、valueはInteger型で指定されています。型の指定はクラス型で行います。
 int型などのプリミティブ型は使用できないので注意しましょう。
@@ -179,21 +178,21 @@ System.out.println(map.get("りんご"));
 **・要素を取得する前に、要素を指定するためのキーがマップに登録されているかどうかを先に確認する事も出来ます。**
 map.contains(key)
 
-public class MapExercise {
-	public static void main(String args[]){
-	    HashMap<String,String> map = new HashMap<String,String>();
-
-	    map.put("りんご", "apple");
-	    map.put("ぶどう", "grapes");
-
-	    if (map.containsKey("りんご")){
-	      System.out.print("りんごを英語にすると");
-	      System.out.println(map.get("りんご"));
-	    }else{
-	      System.out.println("指定したキーは存在しません");
-	    }
-	  }
-}
+    public class MapExercise {
+    	public static void main(String args[]){
+    	    HashMap<String,String> map = new HashMap<String,String>();
+    
+    	    map.put("りんご", "apple");
+    	    map.put("ぶどう", "grapes");
+    
+    	    if (map.containsKey("りんご")){
+    	      System.out.print("りんごを英語にすると");
+    	      System.out.println(map.get("りんご"));
+    	    }else{
+    	      System.out.println("指定したキーは存在しません");
+    	    }
+    	  }
+    }
 
 **・要素を削除する**
 map.remove(key)
@@ -221,8 +220,11 @@ map.clear()
 	  }
 
 ループを回して、すべての要素を取り出す
+<> には「ダイヤモンド演算子（オペレータ）」という名前です。初期化して変数に代入するタイミングで、生成するクラスの型を推理してくれるという便利機能。
 
-    	  public class MapExercise {
+
+
+    public class MapExercise {
         public static void main(String[] args) {
             Map<String, Integer> map = new HashMap<>();
             map.put("apple", 123);
@@ -252,6 +254,7 @@ entrySet() マップに含まれるキーと値のSetを返す
     }
 
 毎回プリントされた順番が違うことがあり得ます。
+
 **■Set**
 要素の重複は不可です。Mapとの区別は、Keyだけ格納します。
 使っているmethodはmapとほどんど同じです。
