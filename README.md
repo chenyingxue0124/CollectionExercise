@@ -89,7 +89,7 @@ new演算子では型名の後の「[」から「]」の間に要素の数であ
     }
 
 配列には次のような制限があります。
-**１．初期化後に配列のサイズを変更することはできません。
+**１．初期化後に配列のサイズを変更することはできません。<br>
 ２．配列はインデックス順にしかアクセスできません。**
 
 なので、javaのpackage java.utilに、**List,Set,Map**という配列と違ってコレクションがあります。
@@ -105,19 +105,19 @@ new演算子では型名の後の「[」から「]」の間に要素の数であ
 配列は固定の大きさなので、追加・削除・検索はできない。
 しかし、Listは可変であるので、要素をどんどん追加できるし、削除もできる。
 
-よく使っているmethod：
-**・Listの最後に要素を追加**
-　list.add("A");
-**・指定した位置に、要素を追加**
-　list.add(index,"A");
-**・要素の取得**
-　list.get(index);指定された位置にある要素を戻す
-**・要素の置換**
-　list.set(index,"A");すでに存在する要素を、indexを指定して置き換える。
-**・削除**
-　list.remove(index);
-**・検索**
-　list.indexof("A");
+よく使っているmethod：<br>
+**・Listの最後に要素を追加**<br>
+　list.add("A");<br>
+**・指定した位置に、要素を追加**<br>
+　list.add(index,"A");<br>
+**・要素の取得**<br>
+　list.get(index);指定された位置にある要素を戻す<br>
+**・要素の置換**<br>
+　list.set(index,"A");すでに存在する要素を、indexを指定して置き換える。<br>
+**・削除**<br>
+　list.remove(index);<br>
+**・検索**<br>
+　list.indexof("A");<br>
 
     public class ListExercise {
         public static void main(String[] args) {
@@ -146,15 +146,15 @@ Listと配列の変換
 
     String array[] = list.toArray(new String[4]);
 
-Listの種類
-**ArrayList　LinkedList**
-**・ArrayList長所と短所**
-特定の要素にアクセスするスピードが早い
-要素を追加するスピードが遅い
-**・LinkedList長所と短所**
-要素を追加したり削除するスピードが早い
-特定の要素にアクセスするスピードが遅い
-http://bowtin.hatenablog.com/entry/2018/01/24/145452
+Listの種類<br>
+**ArrayList　LinkedList**<br>
+**・ArrayList長所と短所**<br>
+特定の要素にアクセスするスピードが早い<br>
+要素を追加するスピードが遅い<br>
+**・LinkedList長所と短所**<br>
+要素を追加したり削除するスピードが早い<br>
+特定の要素にアクセスするスピードが遅い<br>
+http://bowtin.hatenablog.com/entry/2018/01/24/145452<br>
 
 **■Map**
 Mapはインデックスとなるkeyとそのデータとなるvalueの両方を定義することができます。keyには整数値のほかにString型などの変数なども指定することができます。keyに指定した変数から、valueを呼び出すことができます。
@@ -168,15 +168,15 @@ Mapの定義
 MapのkeyはString型、valueはInteger型で指定されています。型の指定はクラス型で行います。
 int型などのプリミティブ型は使用できないので注意しましょう。
 
-**・要素を格納する**
-map.put(key,value)
-map.put("りんご", "apple");
-map.put("ぶどう", "grapes");
-**・要素を取り出す。要素を取り出すにはキーを指定し、そのキーに対応した要素を取り出すことになります**
-map.get(key)
-System.out.println(map.get("りんご"));
-**・要素を取得する前に、要素を指定するためのキーがマップに登録されているかどうかを先に確認する事も出来ます。**
-map.contains(key)
+**・要素を格納する**<br>
+map.put(key,value)<br>
+map.put("りんご", "apple");<br>
+map.put("ぶどう", "grapes");<br>
+**・要素を取り出す。要素を取り出すにはキーを指定し、そのキーに対応した要素を取り出すことになります**<br>
+map.get(key)<br>
+System.out.println(map.get("りんご"));<br>
+**・要素を取得する前に、要素を指定するためのキーがマップに登録されているかどうかを先に確認する事も出来ます。**v
+map.contains(key)<br>
 
     public class MapExercise {
     	public static void main(String args[]){
@@ -194,11 +194,11 @@ map.contains(key)
     	  }
     }
 
-**・要素を削除する**
-map.remove(key)
-map.remove("ぶどう");
-すべての要素を削除する
-map.clear()
+**・要素を削除する**<br>
+map.remove(key)<br>
+map.remove("ぶどう");<br>
+すべての要素を削除する<br>
+map.clear()<br>
 
 
 
